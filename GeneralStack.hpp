@@ -8,18 +8,15 @@ class Stack {
 		size_t _size;
 		
 	public:
-		//Default constructor
 		Stack(){
-			_size=0;
+			_size = 0;
 		}
 
-		//Default copy constructor
 		Stack(const Stack &s) {
 			_values = s._values;
 			_size = _values.size();	
 		}
 
-		//Getters
 		T top() const {
 			return _values.front();
 		}
@@ -28,15 +25,12 @@ class Stack {
 		
 			return _size;
 		}
-
-		//Adding data to the data structure
 	
 		void push(T value) {	
 			_values.push_front(value);
 
 		}
 
-		//Removing data from the data structure
 		void pop() {
 			_values.pop_front();
 		}
@@ -61,7 +55,6 @@ class Stack {
 			return *this;
 		}
 		
-
 		template <class S>
 		friend std::ostream &operator<< (std::ostream &out, const Stack<S> &s);
 
